@@ -64,8 +64,9 @@ const ROMAN: Record<string, number> = {
   x: 10,
 }
 
-/** "generation-iv" → 4 */
-export function generationNumber(name: string): number {
+/** "generation-iv" → 4. Recurso ausente (null/undefined) o numérico → 0. */
+export function generationNumber(name: string | null | undefined): number {
+  if (!name) return 0
   const roman = name.split('-').pop() ?? ''
   return ROMAN[roman] ?? 0
 }

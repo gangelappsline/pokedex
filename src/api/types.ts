@@ -349,7 +349,8 @@ export interface Region {
   name: string
   locations: NamedAPIResource[]
   names: LocalizedName[]
-  main_generation: NamedAPIResource
+  /** null en regiones sin generación principal (Hisui, Orre...). */
+  main_generation: NamedAPIResource | null
   pokedexes: NamedAPIResource[]
   version_groups: NamedAPIResource[]
 }
