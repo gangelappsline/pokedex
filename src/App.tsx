@@ -17,6 +17,8 @@ const ItemsPage = lazy(() => import('./pages/ItemsPage'))
 const ItemDetailPage = lazy(() => import('./pages/ItemDetailPage'))
 const NaturesPage = lazy(() => import('./pages/NaturesPage'))
 const RegionsPage = lazy(() => import('./pages/RegionsPage'))
+const GuidesPage = lazy(() => import('./pages/GuidesPage'))
+const GameDetailPage = lazy(() => import('./pages/GameDetailPage'))
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'))
 
 function Lazy({ children }: { children: ReactNode }) {
@@ -55,6 +57,8 @@ export default function App() {
         <Route path="objetos/:name" element={<Lazy><ItemDetailPage /></Lazy>} />
         <Route path="naturalezas" element={<Lazy><NaturesPage /></Lazy>} />
         <Route path="regiones" element={<Lazy><RegionsPage /></Lazy>} />
+        <Route path="guias" element={<Lazy><GuidesPage /></Lazy>} />
+        <Route path="guias/:slug" element={<Lazy><GameDetailPage /></Lazy>} />
         <Route path="*" element={<Lazy><NotFoundPage /></Lazy>} />
       </Route>
     </Routes>

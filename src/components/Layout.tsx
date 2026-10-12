@@ -15,6 +15,7 @@ const NAV_ITEMS = [
   { to: '/objetos', label: 'Objetos' },
   { to: '/naturalezas', label: 'Naturalezas' },
   { to: '/regiones', label: 'Regiones' },
+  { to: '/guias', label: 'Guías' },
 ]
 
 function Logo() {
@@ -64,7 +65,7 @@ export function Layout() {
       <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-950/75 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-3 sm:px-6">
           <Logo />
-          <nav className="ml-4 hidden flex-1 items-center gap-1 lg:flex" aria-label="Principal">
+          <nav className="ml-4 hidden flex-1 items-center gap-1 xl:flex" aria-label="Principal">
             {NAV_ITEMS.map((item) => (
               <NavLink
                 key={item.to}
@@ -88,7 +89,7 @@ export function Layout() {
             </Link>
             <button
               type="button"
-              className="btn-ghost px-3 lg:hidden"
+              className="btn-ghost px-3 xl:hidden"
               onClick={() => setOpen((v) => !v)}
               aria-expanded={open}
               aria-label="Abrir menú"
@@ -103,7 +104,7 @@ export function Layout() {
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              className="overflow-hidden border-t border-white/10 lg:hidden"
+              className="overflow-hidden border-t border-white/10 xl:hidden"
               aria-label="Menú móvil"
             >
               <div className="grid grid-cols-2 gap-1 p-3">
