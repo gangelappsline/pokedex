@@ -21,6 +21,7 @@ const SECTIONS = [
   { to: '/objetos', title: 'Objetos', desc: 'Objetos por categoría, con sus efectos y los Pokémon que los llevan.' },
   { to: '/naturalezas', title: 'Naturalezas', desc: 'Qué estadística sube y cuál baja con cada naturaleza.' },
   { to: '/regiones', title: 'Regiones', desc: 'Regiones, generaciones y sus Pokédex regionales.' },
+  { to: '/guias', title: 'Guías de juegos', desc: 'Carátula, información y guías de todos los juegos Pokémon.' },
 ]
 
 export default function HomePage() {
